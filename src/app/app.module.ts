@@ -2,15 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ItemsComponent } from './items/items.component';
+import { HistoryComponent } from './history/history.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NavigationComponent } from './navigation/navigation.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ItemsComponent,
+    HistoryComponent,
+    StatisticsComponent,
+    NavigationComponent,
+    CartComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
