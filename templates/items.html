@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              selago: "#FAFAFE",
+              california: "#F9A109",
+              "burnt-sienna": "#EB5757",
+              "peach-cream": "#fff0de",
+              "cannon-pink": "#80485b",
+              tundora: "#454545",
+              gray: "#828282",
+            },
+            fontFamily: {
+              quicksand: `'Quicksand', sans-serif`,
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Items - Shoppingify</title>
+  </head>
+  <body class="bg-selago max-w-[1600px] font-quicksand font-medium leading-5">
+    <main class="relative flex">
+      <!-- Left Sidebar -->
+      <aside
+        class="h-screen flex flex-col justify-between items-center bg-white py-8 w-[60px] md:w-[70px] lg:w-[80px] xl:w-[90px] fixed"
+      >
+        <!-- Logo -->
+        <a href="$"><img src="./assets/logo.svg" alt="shoppingify logo" /></a>
+        <!-- MenuItems -->
+        <ul class="flex flex-col gap-8">
+          <!-- items Link -->
+          <li class="group relative">
+            <a href="items.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </a>
+            <!-- Arrow Left -->
+            <span
+              class="absolute left-[200%] top-[50%] translate-y-[-50%] invisible -z-1 group-hover:visible group-hover:z-1"
+              ><div
+                class="relative bg-tundora text-white p-2 px-4 rounded-[6px]"
+              >
+                <span
+                  class="absolute w-2 h-2 -left-2 top-[50%] translate-y-[-50%] border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-r-[8px] border-r-tundora"
+                ></span>
+                Items
+              </div>
+            </span>
+          </li>
+          <!-- History Link -->
+          <li class="relative group">
+            <a href="history.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+                />
+              </svg>
+            </a>
+            <span
+              class="absolute left-[200%] top-[50%] translate-y-[-50%] invisible -z-1 group-hover:visible group-hover:z-1"
+              ><div
+                class="relative bg-tundora text-white p-2 px-4 rounded-[6px]"
+              >
+                <span
+                  class="absolute w-2 h-2 -left-2 top-[50%] translate-y-[-50%] border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-r-[8px] border-r-tundora"
+                ></span>
+                History
+              </div>
+            </span>
+          </li>
+          <!-- statistics Link -->
+          <li class="relative group">
+            <a href="statistics.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                />
+              </svg>
+            </a>
+            <span
+              class="absolute left-[200%] top-[50%] translate-y-[-50%] invisible -z-1 group-hover:visible group-hover:z-1"
+              ><div
+                class="relative bg-tundora text-white p-2 px-4 rounded-[6px]"
+              >
+                <span
+                  class="absolute w-2 h-2 -left-2 top-[50%] translate-y-[-50%] border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-r-[8px] border-r-tundora"
+                ></span>
+                Statistics
+              </div>
+            </span>
+          </li>
+        </ul>
+        <!-- Cart Button -->
+        <button
+          class="relative w-[40px] h-[40px] rounded-full bg-california flex items-center justify-center text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="white"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+          <span
+            class="absolute rounded-[4px] bg-burnt-sienna w-[20px] h-[20px] text-[10px] flex items-center justify-center -top-1 -right-1"
+            >3
+          </span>
+        </button>
+      </aside>
+      <div class="w-[60px] md:w-[70px] lg:w-[80px] xl:w-[90px]"></div>
+      <!-- Home Section - Main -->
+      <section class="p-4 py-8 lg:p-12 xl:p-20 xl:mr-[400px]">
+        <!-- header and Form -->
+        <div
+          class="flex flex-col gap-4 justify-center mb-8 lg:flex-row lg:justify-between lg:items-start lg:gap-8 lg:mb-12 xl:gap-12"
+        >
+          <h1 class="text-[22px] xl:text-[26px] leading-[32px]">
+            <span class="text-california">Shoppingify</span> allows you take
+            your shopping list wherever you go
+          </h1>
+
+          <form class="relative lg:w-[275px]">
+            <img
+              src="./assets/search_icon.svg"
+              alt="search icon"
+              class="absolute w-[26px] h-[26px] top-[50%] translate-y-[-50%] left-4"
+            />
+            <input
+              aria-label="search term"
+              type="text"
+              placeholder="search item"
+              class="pl-12 p-4 bg-white rounded-[15px] w-full"
+            />
+          </form>
+        </div>
+
+        <div class="">
+          <div class="grid gap-12">
+            <!-- items -->
+            <div>
+              <h3 class="text-[18px] lg:text-[22px] mb-6">
+                Fruits and Vegetables
+              </h3>
+              <ul
+                class="grid gap-4 grid-cols-2 lg:gap-6 lg:grid-cols-3 xl:grid-cols-4"
+              >
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+              </ul>
+            </div>
+            <!-- items -->
+            <div>
+              <h3 class="text-[18px] lg:text-[22px] mb-6">
+                Fruits and Vegetables
+              </h3>
+              <ul
+                class="grid gap-4 grid-cols-2 lg:gap-6 lg:grid-cols-3 xl:grid-cols-4"
+              >
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+              </ul>
+            </div>
+            <!-- items -->
+            <div>
+              <h3 class="text-[18px] lg:text-[22px] mb-6">
+                Fruits and Vegetables
+              </h3>
+              <ul
+                class="grid gap-4 grid-cols-2 lg:gap-6 lg:grid-cols-3 xl:grid-cols-4"
+              >
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+              </ul>
+            </div>
+            <!-- items -->
+            <div>
+              <h3 class="text-[18px] lg:text-[22px] mb-6">
+                Fruits and Vegetables
+              </h3>
+              <ul
+                class="grid gap-4 grid-cols-2 lg:gap-6 lg:grid-cols-3 xl:grid-cols-4"
+              >
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-between p-4 bg-white rounded-[10px] shadow-black"
+                >
+                  Avocado
+                  <img
+                    src="./assets/plus_grey_icon.svg"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Sidebar -->
+      <aside
+        class="fixed right-0 top-0 h-screen bg-peach-cream w-[calc(100%-60px)] flex flex-col translate-x-[100%] xl:w-[400px] xl:translate-x-0"
+      >
+        <div class="p-6 flex-grow lg:p-8">
+          <!-- Add Item Box -->
+          <div
+            class="p-4 bg-cannon-pink rounded-[20px] flex gap-8 font-bold h-[125px] items-center"
+          >
+            <img
+              src="./assets/source.svg"
+              alt="item"
+              class="-mt-8 xl:hidden 2xl:block"
+            />
+            <div>
+              <p class="text-white mb-4">Didn’t find what you need?</p>
+              <button class="px-4 py-2 bg-white rounded-[12px]">
+                Add item
+              </button>
+            </div>
+          </div>
+
+          <div class="pt-10">
+            <div class="flex items-center justify-between mb-8 h-[25px]">
+              <h2 class="text-[24px] text-black font-bold">Shopping List</h2>
+              <button title="edit list title" class="">
+                <img
+                  src="./assets/edit_icon.svg"
+                  alt="edit icon"
+                  class="w-5 h-5"
+                />
+              </button>
+            </div>
+
+            <div class="items h-[calc(85vh-280px)] overflow-y-scroll">
+              <div class="pr-2">
+                <!-- Category List -->
+                <div class="mb-8">
+                  <h3 class="text-[14px] lg:text-[18px] text-gray mb-2">
+                    Fruit and vegetables
+                  </h3>
+                  <!-- List -->
+                  <ul class="text-[14px] lg:text-[18px]">
+                    <li class="flex items-center justify-between gap-4 mb-2">
+                      <span>Avocado</span>
+                      <div
+                        class="flex items-center gap-2 rounded-[12px] h-[45px] group hover:bg-white"
+                      >
+                        <button
+                          title="delete item"
+                          class="bg-california rounded-[12px] px-2 h-full hidden group-hover:block"
+                        >
+                          <img
+                            src="./assets/delete_icon.svg"
+                            alt="delete icon"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <div class="py-2 flex">
+                          <button
+                            title="reduce item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/minus_icon.svg"
+                              alt="minus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <p
+                            class="py-1 px-4 rounded-[20px] border-2 border-california text-california text-[12px]"
+                          >
+                            3pcs
+                          </p>
+                          <button
+                            title="increase item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/plus_icon.svg"
+                              alt="plus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex items-center justify-between gap-4">
+                      <span>Avocado</span>
+                      <div
+                        class="flex items-center gap-2 rounded-[12px] h-[45px] group hover:bg-white"
+                      >
+                        <button
+                          title="delete item"
+                          class="bg-california rounded-[12px] px-2 h-full hidden group-hover:block"
+                        >
+                          <img
+                            src="./assets/delete_icon.svg"
+                            alt="delete icon"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <div class="py-2 flex">
+                          <button
+                            title="reduce item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/minus_icon.svg"
+                              alt="minus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <p
+                            class="py-1 px-4 rounded-[20px] border-2 border-california text-california text-[12px]"
+                          >
+                            3pcs
+                          </p>
+                          <button
+                            title="increase item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/plus_icon.svg"
+                              alt="plus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Category List -->
+                <div class="mb-8">
+                  <h3 class="text-[14px] lg:text-[18px] text-gray mb-2">
+                    Fruit and vegetables
+                  </h3>
+                  <!-- List -->
+                  <ul class="text-[14px] lg:text-[18px]">
+                    <li class="flex items-center justify-between gap-4 mb-2">
+                      <span>Avocado</span>
+                      <div
+                        class="flex items-center gap-2 rounded-[12px] h-[45px] group hover:bg-white"
+                      >
+                        <button
+                          title="delete item"
+                          class="bg-california rounded-[12px] px-2 h-full hidden group-hover:block"
+                        >
+                          <img
+                            src="./assets/delete_icon.svg"
+                            alt="delete icon"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <div class="py-2 flex">
+                          <button
+                            title="reduce item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/minus_icon.svg"
+                              alt="minus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <p
+                            class="py-1 px-4 rounded-[20px] border-2 border-california text-california text-[12px]"
+                          >
+                            3pcs
+                          </p>
+                          <button
+                            title="increase item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/plus_icon.svg"
+                              alt="plus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex items-center justify-between gap-4">
+                      <span>Avocado</span>
+                      <div
+                        class="flex items-center gap-2 rounded-[12px] h-[45px] group hover:bg-white"
+                      >
+                        <button
+                          title="delete item"
+                          class="bg-california rounded-[12px] px-2 h-full hidden group-hover:block"
+                        >
+                          <img
+                            src="./assets/delete_icon.svg"
+                            alt="delete icon"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <div class="py-2 flex">
+                          <button
+                            title="reduce item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/minus_icon.svg"
+                              alt="minus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <p
+                            class="py-1 px-4 rounded-[20px] border-2 border-california text-california text-[12px]"
+                          >
+                            3pcs
+                          </p>
+                          <button
+                            title="increase item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/plus_icon.svg"
+                              alt="plus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Category List -->
+                <div class="mb-8">
+                  <h3 class="text-[14px] lg:text-[18px] text-gray mb-2">
+                    Fruit and vegetables
+                  </h3>
+                  <!-- List -->
+                  <ul class="text-[14px] lg:text-[18px]">
+                    <li class="flex items-center justify-between gap-4 mb-2">
+                      <span>Avocado</span>
+                      <div
+                        class="flex items-center gap-2 rounded-[12px] h-[45px] group hover:bg-white"
+                      >
+                        <button
+                          title="delete item"
+                          class="bg-california rounded-[12px] px-2 h-full hidden group-hover:block"
+                        >
+                          <img
+                            src="./assets/delete_icon.svg"
+                            alt="delete icon"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <div class="py-2 flex">
+                          <button
+                            title="reduce item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/minus_icon.svg"
+                              alt="minus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <p
+                            class="py-1 px-4 rounded-[20px] border-2 border-california text-california text-[12px]"
+                          >
+                            3pcs
+                          </p>
+                          <button
+                            title="increase item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/plus_icon.svg"
+                              alt="plus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex items-center justify-between gap-4">
+                      <span>Avocado</span>
+                      <div
+                        class="flex items-center gap-2 rounded-[12px] h-[45px] group hover:bg-white"
+                      >
+                        <button
+                          title="delete item"
+                          class="bg-california rounded-[12px] px-2 h-full hidden group-hover:block"
+                        >
+                          <img
+                            src="./assets/delete_icon.svg"
+                            alt="delete icon"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <div class="py-2 flex">
+                          <button
+                            title="reduce item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/minus_icon.svg"
+                              alt="minus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <p
+                            class="py-1 px-4 rounded-[20px] border-2 border-california text-california text-[12px]"
+                          >
+                            3pcs
+                          </p>
+                          <button
+                            title="increase item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/plus_icon.svg"
+                              alt="plus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Category List -->
+                <div>
+                  <h3 class="text-[14px] lg:text-[18px] text-gray mb-2">
+                    Fruit and vegetables
+                  </h3>
+                  <!-- List -->
+                  <ul class="text-[14px] lg:text-[18px]">
+                    <li class="flex items-center justify-between gap-4 mb-2">
+                      <span>Avocado</span>
+                      <div
+                        class="flex items-center gap-2 rounded-[12px] h-[45px] group hover:bg-white"
+                      >
+                        <button
+                          title="delete item"
+                          class="bg-california rounded-[12px] px-2 h-full hidden group-hover:block"
+                        >
+                          <img
+                            src="./assets/delete_icon.svg"
+                            alt="delete icon"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <div class="py-2 flex">
+                          <button
+                            title="reduce item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/minus_icon.svg"
+                              alt="minus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <p
+                            class="py-1 px-4 rounded-[20px] border-2 border-california text-california text-[12px]"
+                          >
+                            3pcs
+                          </p>
+                          <button
+                            title="increase item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/plus_icon.svg"
+                              alt="plus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="flex items-center justify-between gap-4">
+                      <span>Avocado</span>
+                      <div
+                        class="flex items-center gap-2 rounded-[12px] h-[45px] group hover:bg-white"
+                      >
+                        <button
+                          title="delete item"
+                          class="bg-california rounded-[12px] px-2 h-full hidden group-hover:block"
+                        >
+                          <img
+                            src="./assets/delete_icon.svg"
+                            alt="delete icon"
+                            class="w-5 h-5"
+                          />
+                        </button>
+                        <div class="py-2 flex">
+                          <button
+                            title="reduce item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/minus_icon.svg"
+                              alt="minus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                          <p
+                            class="py-1 px-4 rounded-[20px] border-2 border-california text-california text-[12px]"
+                          >
+                            3pcs
+                          </p>
+                          <button
+                            title="increase item"
+                            class="px-2 hidden group-hover:block"
+                          >
+                            <img
+                              src="./assets/plus_icon.svg"
+                              alt="plus icon"
+                              class="w-5 h-5"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="bg-white p-4 h-[15vh] lg:p-8 flex items-center">
+          <form class="relative w-full">
+            <input
+              type="text"
+              placeholder="Enter a name"
+              class="border-[2px] border-california rounded-[12px] p-4 w-full"
+            />
+            <button
+              type="submit"
+              class="absolute bg-california text-white top-0 right-0 h-full w-[90px] rounded-[12px]"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
