@@ -8,7 +8,6 @@
 
 .items::-webkit-scrollbar {
   width: 0.5em;
-  margin-left: 1rem;
 }
 
 .items::-webkit-scrollbar-track {
@@ -16,6 +15,19 @@
 }
 
 .items::-webkit-scrollbar-thumb {
+  background-color: rgb(130, 130, 130, 0.5);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.75em;
+}
+
+body::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+}
+
+body::-webkit-scrollbar-thumb {
   background-color: rgb(130, 130, 130, 0.5);
   border-radius: 10px;
 }

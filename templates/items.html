@@ -35,13 +35,11 @@
 
     <title>Items - Shoppingify</title>
   </head>
-  <body
-    class="h-screen bg-selago max-w-[1600px] overflow-hidden bg-red-400 font-quicksand font-medium leading-5"
-  >
+  <body class="bg-selago max-w-[1600px] font-quicksand font-medium leading-5">
     <main class="relative flex">
       <!-- Left Sidebar -->
       <aside
-        class="h-screen flex flex-col justify-between items-center bg-white py-8 w-[60px] md:w-[70px] lg:w-[80px] xl:w-[90px]"
+        class="h-screen flex flex-col justify-between items-center bg-white py-8 w-[60px] md:w-[70px] lg:w-[80px] xl:w-[90px] fixed"
       >
         <!-- Logo -->
         <a href="$"><img src="./assets/logo.svg" alt="shoppingify logo" /></a>
@@ -163,11 +161,12 @@
           </span>
         </button>
       </aside>
+      <div class="w-[60px] md:w-[70px] lg:w-[80px] xl:w-[90px]"></div>
       <!-- Home Section - Main -->
-      <section class="flex-grow px-4 lg:px-12 xl:px-20">
+      <section class="p-4 py-8 lg:p-12 xl:p-20 xl:mr-[400px]">
         <!-- header and Form -->
         <div
-          class="flex flex-col gap-4 h-[25vh] justify-center lg:flex-row lg:justify-between lg:items-start lg:gap-8 lg:h-[20vh] lg:pt-12 xl:gap-12"
+          class="flex flex-col gap-4 justify-center mb-8 lg:flex-row lg:justify-between lg:items-start lg:gap-8 lg:mb-12 xl:gap-12"
         >
           <h1 class="text-[22px] xl:text-[26px] leading-[32px]">
             <span class="text-california">Shoppingify</span> allows you take
@@ -189,8 +188,8 @@
           </form>
         </div>
 
-        <div class="items overflow-y-scroll h-[75vh] pb-12 lg:h-[80vh]">
-          <div class="pr-2 lg:pr-4 grid gap-12">
+        <div class="">
+          <div class="grid gap-12">
             <!-- items -->
             <div>
               <h3 class="text-[18px] lg:text-[22px] mb-6">
@@ -477,9 +476,9 @@
 
       <!-- Right Sidebar -->
       <aside
-        class="absolute right-0 top-0 h-screen bg-peach-cream w-[calc(100%-60px)] flex flex-col xl:w-[400px] translate-x-[100%] xl:relative xl:translate-x-0"
+        class="fixed right-0 top-0 h-screen bg-peach-cream w-[calc(100%-60px)] flex flex-col translate-x-[100%] xl:w-[400px] xl:translate-x-0"
       >
-        <div class="p-6 flex-grow lg:p-8 h-[85vh]">
+        <div class="p-6 flex-grow lg:p-8">
           <!-- Add Item Box -->
           <div
             class="p-4 bg-cannon-pink rounded-[20px] flex gap-8 font-bold h-[125px] items-center"
@@ -509,7 +508,7 @@
               </button>
             </div>
 
-            <div class="items h-[calc(85vh-265px)] overflow-y-scroll">
+            <div class="items h-[calc(85vh-280px)] overflow-y-scroll">
               <div class="pr-2">
                 <!-- Category List -->
                 <div class="mb-8">
